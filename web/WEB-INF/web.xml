@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    
+    
+    <filter>
+        <filter-name>Cookies_Filter</filter-name>
+        <filter-class>filter_package.Cookies_Filter</filter-class>
+    </filter>
+    <filter>
+        <filter-name>FindCookies</filter-name>
+        <filter-class>filter_package.FindCookies</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>Cookies_Filter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>FindCookies</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+<!--    <filter>
+        <filter-name>Cookies_Filter</filter-name>
+        <filter-class>Cookies_Filter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>Cookies_Filter</filter-name>
+        <url-pattern>/Start</url-pattern>
+        <url-pattern>/Cart.jsp</url-pattern>
+        <url-pattern>/RedirectProfile</url-pattern>
+        <url-pattern>/RedirectEditProfile</url-pattern>
+    </filter-mapping>-->
+    
+<!--    <error-page>  
+        <error-code>404</error-code>  
+        <location>/404.jsp</location>  
+    </error-page>  
+       <error-page>  
+        <error-code>500</error-code>  
+        <location>/404.jsp</location>  
+    </error-page>
+    <error-page>  
+        <error-code>Error-Page/405</error-code>  
+        <location>/404.jsp</location>  
+    </error-page>-->
+</web-app>
